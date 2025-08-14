@@ -324,10 +324,10 @@ export default function HomeLoanCalculator() {
                   Total Payable (Loan + Interest)
                 </h4>
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-                  {(loanDetails.totalAmount / 100000).toFixed(2)}
+                  {loanDetails.totalAmount.toLocaleString("en-IN")}
                 </div>
                 <div className="text-sm sm:text-base lg:text-lg text-gray-300 mt-1 sm:mt-2">
-                  ₹{loanDetails.totalAmount.toLocaleString()}
+                  ₹{loanDetails.totalAmount.toLocaleString("en-IN")}
                 </div>
               </div>
 
@@ -337,10 +337,10 @@ export default function HomeLoanCalculator() {
                   Interest Payable Alone
                 </h4>
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-                  {(loanDetails.totalInterest / 100000).toFixed(2)}
+                  {loanDetails.totalInterest.toLocaleString("en-IN")}
                 </div>
                 <div className="text-sm sm:text-base lg:text-lg text-gray-300 mt-1 sm:mt-2">
-                  ₹{loanDetails.totalInterest.toLocaleString()}
+                  ₹{loanDetails.totalInterest.toLocaleString("en-IN")}
                 </div>
               </div>
 
@@ -352,24 +352,24 @@ export default function HomeLoanCalculator() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <div className="text-2xl sm:text-3xl font-bold text-white">
-                      {(loanDetails.yearlyInterest / 100000).toFixed(2)}
+                      {loanDetails.yearlyInterest.toLocaleString("en-IN")}
                     </div>
                     <div className="text-base sm:text-lg text-gray-300">
                       Yearly
                     </div>
                     <div className="text-xs sm:text-sm text-gray-400">
-                      ₹{loanDetails.yearlyInterest.toLocaleString()}
+                      ₹{loanDetails.yearlyInterest.toLocaleString("en-IN")}
                     </div>
                   </div>
                   <div>
                     <div className="text-2xl sm:text-3xl font-bold text-white">
-                      {(loanDetails.monthlyInterest / 100000).toFixed(2)}
+                      {loanDetails.monthlyInterest.toLocaleString("en-IN")}
                     </div>
                     <div className="text-base sm:text-lg text-gray-300">
                       Monthly
                     </div>
                     <div className="text-xs sm:text-sm text-gray-400">
-                      ₹{loanDetails.monthlyInterest.toLocaleString()}
+                      ₹{loanDetails.monthlyInterest.toLocaleString("en-IN")}
                     </div>
                   </div>
                 </div>

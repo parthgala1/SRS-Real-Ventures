@@ -63,13 +63,13 @@ export default function Home() {
 
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative h-[30vh] sm:h-[60vh] lg:h-[95vh] bg-[#134B70] text-white">
-          <div className="absolute inset-0">
+        <section className="relative w-full min-h-[30vh] sm:min-h-[60vh] lg:min-h-[95vh] max-h-[100vh] bg-[#134B70] text-white overflow-hidden">
+          <div className="absolute inset-0 w-full h-full">
             <Image
               src="/Homepage/LandingPage.jpg"
               alt="Crafting Homes with Heart"
               fill
-              className={`object-cover object-center hero-image-mobile transition-all duration-1000 ${
+              className={`object-cover object-center w-full h-full min-h-[30vh] sm:min-h-[60vh] lg:min-h-[95vh] max-h-[100vh] transition-all duration-1000 ${
                 heroLoaded ? "scale-100" : "scale-110"
               }`}
               quality={100}

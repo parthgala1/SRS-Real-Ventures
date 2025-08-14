@@ -31,8 +31,8 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 bg-[#134B70]/70 backdrop-blur-md shadow-lg text-white py-1 px-4 sm:px-6 lg:px-8 z-50 transition-all duration-500 border-b border-white/10">
-        <div className="container mx-auto flex justify-between items-center">
+      <header className="fixed top-0 left-0 right-0 bg-[#134B70]/70 backdrop-blur-md shadow-lg text-white py-3 px-6 sm:px-10 lg:px-16 z-50 transition-all duration-500 border-b border-white/10 min-h-[72px]">
+        <div className="container mx-auto flex justify-between items-center min-h-[56px]">
           <div
             className={`flex items-center transition-all duration-700 ${
               isVisible
@@ -44,16 +44,16 @@ export default function Navbar() {
               <Image
                 src="/Homepage/logo.png"
                 alt="Shree Riddhi Siddhi Logo"
-                width={100}
-                height={35}
-                className="hover:scale-105 transition-transform duration-300 cursor-pointer sm:w-[120px] sm:h-[40px]"
+                width={140}
+                height={48}
+                className="hover:scale-105 transition-transform duration-300 cursor-pointer w-[120px] h-[40px] md:w-[140px] md:h-[48px]"
               />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav
-            className={`hidden md:flex space-x-12 items-center text-[#D4AF37] transition-all duration-700 delay-300 ${
+            className={`hidden md:flex space-x-14 items-center text-[#D4AF37] transition-all duration-700 delay-300 text-lg ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "-translate-y-5 opacity-0"

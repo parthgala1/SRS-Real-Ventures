@@ -12,6 +12,13 @@ import { ChevronDown } from "lucide-react";
 export default function FAQSection() {
   const [openFaq, setOpenFaq] = useState(null);
 
+  // Color palette
+  const sectionBg = "#497088";
+  const questionBg = "#fff";
+  const questionText = "#222";
+  const answerBg = "#22506B";
+  const answerText = "#fff";
+
   const faqs = [
     {
       id: 1,
@@ -69,13 +76,15 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="bg-[#92C3DD] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto max-w-7xl">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#134B70] text-center mb-8 sm:mb-10 lg:mb-12">
+    <section
+      style={{ background: sectionBg }}
+      className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="container mx-auto max-w-3xl md:max-w-4xl lg:max-w-5xl">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-8 sm:mb-10 lg:mb-12">
           Frequently Asked Questions
         </h2>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+        <div className="flex flex-col gap-4 sm:gap-5">
           {faqs.map((faq) => (
             <Collapsible
               key={faq.id}
@@ -83,29 +92,43 @@ export default function FAQSection() {
               onOpenChange={() => toggleFaq(faq.id)}
             >
               <CollapsibleTrigger className="w-full">
-                <Card className="cursor-pointer hover:shadow-md transition-all duration-300">
-                  <CardHeader className="pb-3 p-4 sm:p-6">
-                    <div className="flex items-center justify-between">
-                      <CardTitle className="text-left text-[#134B70] text-sm sm:text-base lg:text-lg font-semibold pr-2">
-                        {faq.question}
-                      </CardTitle>
-                      <ChevronDown
-                        className={`w-4 h-4 sm:w-5 sm:h-5 text-[#134B70] transition-transform duration-200 flex-shrink-0 ${
-                          openFaq === faq.id ? "rotate-180" : ""
-                        }`}
-                      />
-                    </div>
-                  </CardHeader>
-                </Card>
+                <div
+                  className="w-full rounded-md"
+                  style={{
+                    background: questionBg,
+                    color: questionText,
+                    fontWeight: 700,
+                    fontSize: '1.05rem',
+                    padding: '1.1rem 1.25rem',
+                    border: 'none',
+                    boxShadow: 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    cursor: 'pointer',
+                  }}
+                >
+                  <span style={{ color: questionText }}>{faq.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 ml-2 transition-transform duration-200 flex-shrink-0 ${openFaq === faq.id ? "rotate-180" : ""}`}
+                    style={{ color: sectionBg }}
+                  />
+                </div>
               </CollapsibleTrigger>
               <CollapsibleContent>
-                <Card className="mt-2 border-t-0">
-                  <CardContent className="pt-3 sm:pt-4 p-4 sm:p-6">
-                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </CardContent>
-                </Card>
+                <div
+                  className="w-full mt-1 rounded-md"
+                  style={{
+                    background: answerBg,
+                    color: answerText,
+                    fontWeight: 500,
+                    fontSize: '1rem',
+                    padding: '1.1rem 1.25rem',
+                    borderRadius: '0.5rem',
+                  }}
+                >
+                  {faq.answer}
+                </div>
               </CollapsibleContent>
             </Collapsible>
           ))}

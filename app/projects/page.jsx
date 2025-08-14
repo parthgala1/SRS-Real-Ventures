@@ -191,14 +191,7 @@ export default function ProjectsPage() {
                             "https://placehold.co/400x400/134B70/ffffff?text=Coming+Soon";
                         }}
                       />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 sm:p-4 rounded-b-2xl">
-                        <span className="font-semibold text-white text-base sm:text-lg">
-                          {project.name}
-                        </span>
-                        <div className="text-xs sm:text-sm text-gray-300 mt-1">
-                          Coming Soon
-                        </div>
-                      </div>
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 sm:p-4 rounded-b-2xl"></div>
                     </CardContent>
                   </Card>
                 </div>

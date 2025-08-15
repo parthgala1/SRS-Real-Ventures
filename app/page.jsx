@@ -69,7 +69,7 @@ export default function Home() {
               src="/Homepage/LandingPage.jpg"
               alt="Crafting Homes with Heart"
               fill
-              className={`object-cover object-center w-full h-full min-h-[30vh] sm:min-h-[60vh] lg:min-h-[95vh] max-h-[100vh] transition-all duration-1000 ${
+              className={`object-fit object-center w-full h-full min-h-[30vh] sm:min-h-[60vh] lg:min-h-[95vh] max-h-[100vh] transition-all duration-1000 ${
                 heroLoaded ? "scale-100" : "scale-110"
               }`}
               quality={100}

@@ -25,7 +25,7 @@ const ProjectCard = ({ project, widthClass = "w-full" }) => (
             src={project.projectspageImg}
             alt={project.name}
             fill
-            className="object-cover rounded-2xl transition-transform duration-500"
+            className="object-fit rounded-2xl transition-transform duration-500"
             onError={(e) => {
               e.target.onerror = null;
               e.target.src =
@@ -178,13 +178,13 @@ export default function ProjectsPage() {
                   key={index}
                   className="p-1 w-full sm:w-auto sm:min-w-[280px] sm:max-w-[320px] md:min-w-[300px] md:max-w-[350px]"
                 >
-                  <Card className="overflow-hidden border-none bg-transparent transition-all duration-300 transform hover:scale-105">
+                  <Card className="overflow-hidden shadow-none border-none bg-transparent transition-all duration-300 transform hover:scale-105">
                     <CardContent className="p-0 h-[300px] sm:h-[350px] md:h-[400px] relative">
                       <Image
                         src={project.projectspageImg}
                         alt={project.name}
                         fill
-                        className="object-cover rounded-2xl transition-transform duration-500"
+                        className="object-fit rounded-2xl transition-transform duration-500"
                         onError={(e) => {
                           e.target.onerror = null;
                           e.target.src =

@@ -348,7 +348,10 @@ export default function About() {
 
               {/* Know More Button */}
               <div className="mt-8 sm:mt-10 lg:mt-12">
-                <Button className="bg-gradient-to-r from-[#134B70] to-[#1a5c8a] text-white hover:from-[#D4AF37] hover:to-[#f0c557] hover:scale-110 transform transition-all duration-500 px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full shadow-lg hover:shadow-2xl font-bold text-sm sm:text-base lg:text-lg group relative overflow-hidden">
+                <Button
+                  className="bg-gradient-to-r from-[#134B70] to-[#1a5c8a] text-white hover:from-[#D4AF37] hover:to-[#f0c557] hover:scale-110 transform transition-all duration-500 px-8 sm:px-10 lg:px-12 py-3 sm:py-4 rounded-full shadow-lg hover:shadow-2xl font-bold text-sm sm:text-base lg:text-lg group relative overflow-hidden"
+                  onClick={() => (window.location.href = "/projects")}
+                >
                   <span className="relative z-10 group-hover:scale-110 transition-transform duration-300">
                     KNOW MORE
                   </span>

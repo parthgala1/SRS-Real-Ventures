@@ -67,13 +67,32 @@ export default function Footer() {
           </h4>
           <ul className="space-y-2 text-sm">
             <li className="hover:text-[#D4AF37] transition-colors duration-300">
-              Address
+              <a
+                href="https://www.google.com/maps?q=103,+Sumukh+Darshan+Behind+Parekh+Nagar,+Near+Swami+Vivekanand+International+School,+S.V.+Road+Kandivali+(West)"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#D4AF37]"
+              >
+                Address
+              </a>
             </li>
             <li className="hover:text-[#D4AF37] transition-colors duration-300">
-              Phone
+              <a
+                href="https://wa.me/912228013354"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#D4AF37]"
+              >
+                Phone
+              </a>
             </li>
             <li className="hover:text-[#D4AF37] transition-colors duration-300">
-              Email
+              <a
+                href="mailto:info@srsgroup.in"
+                className="hover:text-[#D4AF37]"
+              >
+                Email
+              </a>
             </li>
             <li className="hover:text-[#D4AF37] transition-colors duration-300">
               Office Hours: Mon-Sat | 10 AM - 7 PM

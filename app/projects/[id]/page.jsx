@@ -605,7 +605,7 @@ export default function ProjectPage() {
             src={project.landingPage}
             alt={project.name}
             fill
-            className="object-cover object-center"
+            className="object-fit object-center"
             priority
           />
         </div>
@@ -617,7 +617,7 @@ export default function ProjectPage() {
             src="/P5/2nd tab.jpg"
             alt="Elegant living space"
             fill
-            className="object-cover"
+            className="object-fit"
           />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/30"></div>

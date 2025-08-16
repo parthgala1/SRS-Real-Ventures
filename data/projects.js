@@ -135,7 +135,7 @@ export const projects = [
     landingPage: "/P5/Landing page.jpg",
     descriptionImg: "/P5/2nd tab.jpg",
     floorMapImg: ["/P5/Floor map 1.jpg", "/P5/floor map 2.jpg"],
-    completed: true,
+    completed: false,
     homePageImg: "/Projects/SNow white.jpg",
     projectspageImg: "/Projects/SNow white.jpg",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.005389542414!2d72.83000217643631!3d19.063500652362446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9140a719b0d%3A0x42318fbe4375ecaf!2sSnow%20White%2C%2014th%20Rd%2C%20Khar%20West%2C%20Mumbai%2C%20Maharashtra%20400050!5e0!3m2!1sen!2sin!4v1755003199054!5m2!1sen!2sin",

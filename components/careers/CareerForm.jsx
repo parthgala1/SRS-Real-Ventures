@@ -181,19 +181,19 @@ export default function CareerForm() {
     }
   };
 
-  return (
-    <Card className="w-full max-w-4xl mx-auto shadow-lg border-2 border-[#134B70]">
-      <CardHeader className="bg-gray-50 border-b border-gray-200">
-        <CardTitle className="text-3xl font-bold text-gray-600 text-center">
-          CAREERS
-        </CardTitle>
-        <p className="text-center text-gray-700 mt-2">
-          Note: The fields marked with asterisk * are mandatory.
-        </p>
-      </CardHeader>
-      <CardContent className="p-8">
-        <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
+    return (
+      <Card className="w-full max-w-4xl mx-auto shadow-lg border-2 border-[#134B70]">
+        <CardHeader className="bg-gray-50 border-b border-gray-200 p-4 sm:p-6">
+          <CardTitle className="text-2xl sm:text-3xl font-bold text-gray-600 text-center">
+            CAREERS
+          </CardTitle>
+          <p className="text-center text-gray-700 mt-2 text-xs sm:text-base">
+            Note: The fields marked with asterisk * are mandatory.
+          </p>
+        </CardHeader>
+        <CardContent className="p-4 sm:p-8">
+          <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {/* Left Column */}
             <div className="space-y-4">
               <div>
@@ -205,7 +205,7 @@ export default function CareerForm() {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent text-gray-900 bg-white ${
+                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent text-gray-900 bg-white text-sm sm:text-base ${
                     errors.fullName ? "border-red-500" : "border-gray-300"
                   }`}
                   placeholder="Enter your full name"
@@ -223,7 +223,7 @@ export default function CareerForm() {
                   name="gender"
                   value={formData.gender}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent text-gray-900 bg-white ${
+                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent text-gray-900 bg-white text-sm sm:text-base ${
                     errors.gender ? "border-red-500" : "border-gray-300"
                   }`}
                 >
@@ -246,7 +246,7 @@ export default function CareerForm() {
                   value={formData.address}
                   onChange={handleInputChange}
                   rows={3}
-                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent resize-none text-gray-900 bg-white ${
+                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent resize-none text-gray-900 bg-white text-sm sm:text-base ${
                     errors.address ? "border-red-500" : "border-gray-300"
                   }`}
                   placeholder="Enter your complete address"
@@ -265,7 +265,7 @@ export default function CareerForm() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent text-gray-900 bg-white ${
+                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent text-gray-900 bg-white text-sm sm:text-base ${
                     errors.phone ? "border-red-500" : "border-gray-300"
                   }`}
                   placeholder="Enter your phone number"
@@ -284,7 +284,7 @@ export default function CareerForm() {
                   name="mobile"
                   value={formData.mobile}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent text-gray-900 bg-white ${
+                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent text-gray-900 bg-white text-sm sm:text-base ${
                     errors.mobile ? "border-red-500" : "border-gray-300"
                   }`}
                   placeholder="Enter your mobile number"
@@ -306,7 +306,7 @@ export default function CareerForm() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent text-gray-900 bg-white ${
+                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent text-gray-900 bg-white text-sm sm:text-base ${
                     errors.email ? "border-red-500" : "border-gray-300"
                   }`}
                   placeholder="Enter your email address"
@@ -325,7 +325,7 @@ export default function CareerForm() {
                   value={formData.comment}
                   onChange={handleInputChange}
                   rows={8}
-                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent resize-none text-gray-900 bg-white ${
+                  className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#134B70] focus:border-transparent resize-none text-gray-900 bg-white text-sm sm:text-base ${
                     errors.comment ? "border-red-500" : "border-gray-300"
                   }`}
                   placeholder="Tell us about yourself, your experience, and why you'd like to join our team..."
@@ -340,7 +340,7 @@ export default function CareerForm() {
                   reCAPTCHA Verification*
                 </label>
                 <div className="flex justify-start">
-                  <div className="recaptcha-container">
+                  <div className="recaptcha-container max-w-full overflow-x-auto">
                     <ReCAPTCHA
                       ref={recaptchaRef}
                       sitekey={RECAPTCHA_SITE_KEY}
@@ -365,19 +365,19 @@ export default function CareerForm() {
                 `}</style>
               </div>
 
-              <div className="flex space-x-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
                 <Button
                   type="button"
                   onClick={handleReset}
                   variant="outline"
-                  className="flex-1 border-[#134B70] text-[#134B70] hover:bg-[#134B70] hover:text-white"
+                  className="w-full sm:flex-1 border-[#134B70] text-[#134B70] hover:bg-[#134B70] hover:text-white"
                 >
                   Reset
                 </Button>
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 bg-[#134B70] hover:bg-[#134B70]/90 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full sm:flex-1 bg-[#134B70] hover:bg-[#134B70]/90 text-white disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </Button>
